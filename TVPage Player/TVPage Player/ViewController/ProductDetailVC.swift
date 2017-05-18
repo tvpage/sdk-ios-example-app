@@ -2,7 +2,7 @@
 //  ProductDetailVC.swift
 //  TVPage Player
 //
-//  Created by   on 25/04/17.
+//  Created by Dilip manek on 25/04/17.
 //
 //
 

@@ -17,10 +17,10 @@
         <array key="Dosis-Medium.otf">
             <string>Dosis-Medium</string>
         </array>
-        <array key="Dosis-Regular.otf">
+        <array key="Dosis-Regular.ttf">
             <string>Dosis-Regular</string>
         </array>
-        <array key="Dosis-SemiBold.otf">
+        <array key="Dosis-SemiBold.ttf">
             <string>Dosis-SemiBold</string>
         </array>
     </customFonts>
@@ -228,10 +228,10 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="142"/>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Non-wQ-czo">
-                                                                            <rect key="frame" x="0.0" y="58" width="73.5" height="35"/>
+                                                                            <rect key="frame" x="0.0" y="58" width="87.5" height="35"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H83-a8-UP8" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                                    <rect key="frame" x="5" y="0.0" width="63.5" height="35"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="77.5" height="35"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.8784313725490196" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="mIA-cO-uNg"/>
@@ -440,9 +440,9 @@
                                                 <rect key="frame" x="0.0" y="1121" width="375" height="465"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT BLOGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-8Q-wWk" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                        <rect key="frame" x="107" y="16" width="160" height="33"/>
+                                                        <rect key="frame" x="110" y="16" width="155" height="33"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="160" id="0IF-PC-ti1"/>
+                                                            <constraint firstAttribute="width" constant="155" id="0IF-PC-ti1"/>
                                                             <constraint firstAttribute="height" constant="33" id="2lr-0V-y1b"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Dosis-Bold" family="Dosis" pointSize="25"/>
@@ -482,14 +482,14 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label  Label Label Label Label Label Label Label " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-Av-62H" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="141" width="359" height="40.5"/>
+                                                                            <rect key="frame" x="8" y="141" width="359" height="37.5"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-fL-14F" customClass="MTTextView" customModule="TVPage_Player" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="184.5" width="359" height="140"/>
+                                                                            <rect key="frame" x="8" y="181.5" width="359" height="140"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="140" id="cLS-yQ-ZGg"/>
@@ -949,7 +949,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7t-zp-GXG" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="14" width="39" height="23"/>
+                                                    <rect key="frame" x="10" y="14" width="44.5" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="SoX-uT-vKC"/>
                                                     </constraints>
@@ -3221,10 +3221,10 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="142"/>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-XX-k83">
-                                                                            <rect key="frame" x="0.0" y="58" width="73.5" height="35"/>
+                                                                            <rect key="frame" x="0.0" y="58" width="87.5" height="35"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-EU-bnc" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                                    <rect key="frame" x="5" y="0.0" width="63.5" height="35"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="77.5" height="35"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.87843137250000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="5YR-X5-YM6"/>
@@ -3790,7 +3790,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BgHeaderCofeeRosting" translatesAutoresizingMaskIntoConstraints="NO" id="clw-M7-t8k">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE ROASTING BASI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOH-iD-Muk" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE ROASTING BASI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOH-iD-Muk" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
                                         <rect key="frame" x="16" y="30" width="344" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bOH-iD-Muk" secondAttribute="height" multiplier="43:5" constant="43" id="qEb-PC-ZLf"/>

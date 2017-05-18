@@ -2,7 +2,7 @@
 //  Constant.swift
 //
 //  Created by Sazzad Iproliya.
-//  Copyright © 2016  . All rights reserved.
+//  Copyright © 2016 Dilip Manek. All rights reserved.
 //
 
 

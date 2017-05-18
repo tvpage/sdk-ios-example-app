@@ -2,8 +2,8 @@
 //  LGSideMainVC.swift
 //  BigCondoNew
 //
-//  Created by   on 08/12/16.
-//  Copyright © 2016  . All rights reserved.
+//  Created by Dilip Manek on 08/12/16.
+//  Copyright © 2016 Dilip Manek. All rights reserved.
 //
 
 import Foundation

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176B28801ECDE0FB00A8FE54 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; };
+		176B28811ECDE0FD00A8FE54 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; };
+		176B28821ECDE0FD00A8FE54 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		177C30BA1EB8583500C8FBC6 /* HelperObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 177C30B91EB8583500C8FBC6 /* HelperObjC.m */; };
 		17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D41ECC633A0023CF20 /* Crashlytics.framework */; };
 		17A084D71ECC63440023CF20 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D61ECC63440023CF20 /* Fabric.framework */; };
 		17A084DB1ECC635B0023CF20 /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17A084DA1ECC635B0023CF20 /* TVPBundle.bundle */; };
-		17B39E6C1ECC88EF00EBE854 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B39E6B1ECC88EF00EBE854 /* TVP.framework */; };
-		17B39E6D1ECC890C00EBE854 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B39E6B1ECC88EF00EBE854 /* TVP.framework */; };
-		17B39E6E1ECC890C00EBE854 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B39E6B1ECC88EF00EBE854 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17E037DC1EC47CA7008083BE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E037DB1EC47CA7008083BE /* Reachability.swift */; };
 		17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */; };
 		17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037E01EC47E29008083BE /* UserNotifications.framework */; };
@@ -103,7 +103,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17B39E6E1ECC890C00EBE854 /* TVP.framework in Embed Frameworks */,
+				176B28821ECDE0FD00A8FE54 /* TVP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,12 +121,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		176B287F1ECDE0FB00A8FE54 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		177C30B81EB8583500C8FBC6 /* HelperObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperObjC.h; sourceTree = "<group>"; };
 		177C30B91EB8583500C8FBC6 /* HelperObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperObjC.m; sourceTree = "<group>"; };
 		17A084D41ECC633A0023CF20 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17A084D61ECC63440023CF20 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		17A084DA1ECC635B0023CF20 /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
-		17B39E6B1ECC88EF00EBE854 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		17E037DB1EC47CA7008083BE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17E037E01EC47E29008083BE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -248,8 +248,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B39E6C1ECC88EF00EBE854 /* TVP.framework in Frameworks */,
-				17B39E6D1ECC890C00EBE854 /* TVP.framework in Frameworks */,
+				176B28801ECDE0FB00A8FE54 /* TVP.framework in Frameworks */,
+				176B28811ECDE0FD00A8FE54 /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -309,7 +309,7 @@
 		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				17B39E6B1ECC88EF00EBE854 /* TVP.framework */,
+				176B287F1ECDE0FB00A8FE54 /* TVP.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";

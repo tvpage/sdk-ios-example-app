@@ -2,8 +2,8 @@
 //  Helper.swift
 //  CommonClass
 //
-//  Created by    on 5/2/16.
-//  Copyright © 2016   . All rights reserved.
+//  Created by Devubha Manek on 5/2/16.
+//  Copyright © 2016 Devubha Manek. All rights reserved.
 //
 
 import Foundation

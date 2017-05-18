@@ -92,6 +92,7 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
         
         boolSubTitle = false
         heightValue = 140.0
+        collectHome502.showsHorizontalScrollIndicator = true
         
     }
 //MARK: - Get Channel Video List

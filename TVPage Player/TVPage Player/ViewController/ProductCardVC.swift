@@ -2,7 +2,7 @@
 //  ProductCardVC.swift
 //  TVPage Player
 //
-//  Created by   on 27/03/17.
+//  Created by Dilip Manek on 27/03/17.
 //
 //
 

@@ -2,7 +2,7 @@
 //  videoPlaybackVC.swift
 //  TVPage Player
 //
-//  Created by   on 22/03/17.
+//  Created by Dilip Manek on 22/03/17.
 //
 //
 

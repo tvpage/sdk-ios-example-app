@@ -2,8 +2,8 @@
 //  NSDictionary+NullReplacement.m
 //  FPW
 //
-//  Created by    on 02/10/15.
-//  Copyright (c) 2015   . All rights reserved.
+//  Created by Devubha Manek on 02/10/15.
+//  Copyright (c) 2015 Devubha Manek. All rights reserved.
 //
 
 #import "NSDictionary+NullReplacement.h"
