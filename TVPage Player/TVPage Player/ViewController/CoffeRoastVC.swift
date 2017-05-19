@@ -57,7 +57,9 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
         arrData = NSMutableArray.init()
         arrTempData = NSMutableArray.init()
         self.lblVideoCount.text = ""
-        lblCoffeeRoast.text = DictChannelData.value(forKey:"title")! as? String
+        
+        lblCoffeeRoast.text = NSString.init(format: "%@", DictChannelData.value(forKey:"title") as! CVarArg).uppercased
+        
         arrFilters = ["Coffee",
                       "Beans",
                       "Vieos"]
@@ -76,7 +78,7 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(true)
-        self.tblCoffee.reloadData()
+        //self.tblCoffee.reloadData()
     }
     
     @IBAction func tappedOnBack(_ sender: Any) {

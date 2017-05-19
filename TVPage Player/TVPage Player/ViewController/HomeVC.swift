@@ -6,7 +6,6 @@
 import UIKit
 import TVP
 
-
 class cellCollectHome501: MTCollectionCell {
     
     @IBOutlet var imgName: UIImageView!
@@ -38,7 +37,7 @@ class cellTblHome: MTTableCell {
     @IBOutlet var lblName: MTLabel!
 }
 
-class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
 
     @IBOutlet var ctrlsideMenu: UIControl!
     @IBOutlet var imgsideMenu: UIImageView!
@@ -58,6 +57,7 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
     var heightValue:CGFloat!
     
     var isChannelVideoListAPICalling = false
+    var isLatestVideoScrollingIndicatorVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +94,27 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
         heightValue = 140.0
         collectHome502.showsHorizontalScrollIndicator = true
         
+        var insets = collectHome502.contentInset
+        let value = (self.view.frame.size.width - (collectHome502.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+        insets.left = 0.0
+        insets.right = value
+        collectHome502.contentInset = insets
+        collectHome502.decelerationRate = UIScrollViewDecelerationRateFast;
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        for view in self.collectHome502.subviews {
+            
+            if view is UIImageView {
+                
+                let imageView = view as? UIImageView
+                imageView?.isHidden = false
+                imageView?.layer.removeAllAnimations()
+                imageView?.alpha = 1.0
+            }
+        }
     }
 //MARK: - Get Channel Video List
     func getChannelVideoList() {
@@ -106,6 +127,8 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
                 
                 appDelegateShared.showHud()
             }
+            
+            print("PAGE NO : \(appDelegateShared.videoPageNumber)")
             
             TvpApiClass.ChannelVideoList(strLoginID: appDelegateShared.loginID, strChhanelID:appDelegateShared.ChannelID, searchString: "", pageNumber: appDelegateShared.videoPageNumber,numberOfVideo: 5) { (arrChannelVideolist:NSArray,strerror:String) in
                 
@@ -127,6 +150,33 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
                         appDelegateShared.videoPageNumber = appDelegateShared.videoPageNumber + 1
                     }
                     self.collectHome502.reloadData()
+                    
+                    if self.isLatestVideoScrollingIndicatorVisible == false {
+                        
+                        self.isLatestVideoScrollingIndicatorVisible = true
+                        if appDelegateShared.arrVideoList.count > 1 {
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                
+                                let indexPath = IndexPath(row: 1, section: 0)
+                                self.collectHome502.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.right, animated: false)
+                                
+                                let indexPath1 = IndexPath(row: 0, section: 0)
+                                self.collectHome502.scrollToItem(at: indexPath1, at: UICollectionViewScrollPosition.right, animated: false)
+                                
+                                for view in self.collectHome502.subviews {
+                                    
+                                    if view is UIImageView {
+                                        
+                                        let imageView = view as? UIImageView
+                                        imageView?.isHidden = false
+                                        imageView?.layer.removeAllAnimations()
+                                        imageView?.alpha = 1.0
+                                    }
+                                }
+                            }
+                        }
+                    }
                     
                 } else {
                     
@@ -228,7 +278,7 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
         }
         else if collectionView.tag == 502 {
             
-            return CGSize(width: self.collectHome502.frame.size.width, height: self.collectHome502.frame.size.height)
+            return CGSize(width: Scale.x * 330.0, height: self.collectHome502.frame.size.height)
         }
         else if collectionView.tag == 503 {
             
@@ -313,18 +363,77 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
       
-        let offsetX = scrollView.contentOffset.x
-        let contentWidth = scrollView.contentSize.width
-
-        print("=============")
-        print("offsetX : \(offsetX)")
-        print("contentWidth : \(contentWidth)")
-        print("scrollView.frame.size.width : \(scrollView.frame.size.width)")
-        if offsetX == contentWidth - (scrollView.frame.size.width * 3){
+        /*if collectHome502 == scrollView {
         
-            print("scrollViewDidScroll")
-            self.getChannelVideoList()
+            let offsetX = scrollView.contentOffset.x
+            let contentWidth = scrollView.contentSize.width
             
+            print("-----------------------")
+            print("offsetX : \(ceil(offsetX))")
+            print("Content Width : \(contentWidth)")
+            print("Scroll Width : \(scrollView.frame.size.width)")
+            print("offsetX1 : \(contentWidth - (Scale.x * 330.0))")
+            print("offsetX2 : \(contentWidth - ((Scale.x * 330.0) * 2))")
+            
+            if ((offsetX == (contentWidth - ((Scale.x * 330.0) * 3))) || (offsetX == (contentWidth - (Scale.x * 330.0)))) {
+                
+                print("scrollViewDidScroll")
+                self.getChannelVideoList()
+            }
+        }*/
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if collectHome502 == scrollView {
+            let center = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2), y: (scrollView.frame.height / 2))
+            if let ip = collectHome502.indexPathForItem(at: center) {
+                if appDelegateShared.arrVideoList.count-3 == ip.row || appDelegateShared.arrVideoList.count-1 == ip.row{
+                    self.getChannelVideoList()
+                    print("indexPath : \(ip.row)")
+                }
+                
+            }
+        }
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        for view in self.collectHome502.subviews {
+            
+            if view is UIImageView {
+                
+                let imageView = view as? UIImageView
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    
+                    imageView?.isHidden = false
+                    imageView?.layer.removeAllAnimations()
+                    imageView?.alpha = 1.0
+                }
+            }
+        }
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        //For latest video scroll indicator visible
+        for view in self.collectHome502.subviews {
+            
+            if view is UIImageView {
+                
+                let imageView = view as? UIImageView
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    
+                    imageView?.isHidden = false
+                    imageView?.layer.removeAllAnimations()
+                    imageView?.alpha = 1.0
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    
+                    imageView?.isHidden = false
+                    imageView?.layer.removeAllAnimations()
+                    imageView?.alpha = 1.0
+                }
+            }
         }
     }
     @IBAction func txtChangeHeight(_ sender: Any) {

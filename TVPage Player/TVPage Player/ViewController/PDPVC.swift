@@ -46,8 +46,17 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
         self.ratingView.floatRatings = true;
         
         lblProductTitle.text = dictProductData.value(forKey:"title") as? String
-        lblProductRate.text = dictProductData.value(forKey:"price") as? String
-       
+        let strPrice = NSString.init(format: "%@", dictProductData.value(forKey:"price") as! CVarArg) as String
+        
+        if strPrice.length > 1 {
+        
+            lblProductRate.text = strPrice
+            
+        } else {
+            
+            lblProductRate.text = ""
+        }
+        
         let url_string = dictProductData.value(forKey:"imageUrl") as! String
         let url =  URL(string:url_string)!
         imgProduct.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))

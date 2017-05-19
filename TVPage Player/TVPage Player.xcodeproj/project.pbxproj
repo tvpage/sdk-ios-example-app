@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176B28801ECDE0FB00A8FE54 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; };
-		176B28811ECDE0FD00A8FE54 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; };
-		176B28821ECDE0FD00A8FE54 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 176B287F1ECDE0FB00A8FE54 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1779E3B41ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */; };
 		177C30BA1EB8583500C8FBC6 /* HelperObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 177C30B91EB8583500C8FBC6 /* HelperObjC.m */; };
 		17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D41ECC633A0023CF20 /* Crashlytics.framework */; };
 		17A084D71ECC63440023CF20 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D61ECC63440023CF20 /* Fabric.framework */; };
-		17A084DB1ECC635B0023CF20 /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17A084DA1ECC635B0023CF20 /* TVPBundle.bundle */; };
 		17E037DC1EC47CA7008083BE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E037DB1EC47CA7008083BE /* Reachability.swift */; };
 		17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */; };
 		17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037E01EC47E29008083BE /* UserNotifications.framework */; };
+		17F0ECE01ECF401F0020B407 /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17F0ECDF1ECF401F0020B407 /* TVPBundle.bundle */; };
+		17F0ECE61ECF419D0020B407 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F0ECE51ECF419D0020B407 /* TVP.framework */; };
+		17F0ECE71ECF41A80020B407 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F0ECE51ECF419D0020B407 /* TVP.framework */; };
+		17F0ECE81ECF41A80020B407 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17F0ECE51ECF419D0020B407 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF3EBB8F1E712ACF00F4BF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3EBB8D1E712ACF00F4BF85 /* Main.storyboard */; };
 		EF3EBB911E712ACF00F4BF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3EBB901E712ACF00F4BF85 /* Assets.xcassets */; };
 		EF3EBB941E712AD000F4BF85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3EBB921E712AD000F4BF85 /* LaunchScreen.storyboard */; };
@@ -103,7 +104,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				176B28821ECDE0FD00A8FE54 /* TVP.framework in Embed Frameworks */,
+				17F0ECE81ECF41A80020B407 /* TVP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,15 +122,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		176B287F1ECDE0FB00A8FE54 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
+		1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		177C30B81EB8583500C8FBC6 /* HelperObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperObjC.h; sourceTree = "<group>"; };
 		177C30B91EB8583500C8FBC6 /* HelperObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperObjC.m; sourceTree = "<group>"; };
 		17A084D41ECC633A0023CF20 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17A084D61ECC63440023CF20 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		17A084DA1ECC635B0023CF20 /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
 		17E037DB1EC47CA7008083BE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17E037E01EC47E29008083BE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		17F0ECDF1ECF401F0020B407 /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
+		17F0ECE51ECF419D0020B407 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		EF3EBB861E712ACF00F4BF85 /* TVPage Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPage Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3EBB8E1E712ACF00F4BF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF3EBB901E712ACF00F4BF85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,8 +250,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176B28801ECDE0FB00A8FE54 /* TVP.framework in Frameworks */,
-				176B28811ECDE0FD00A8FE54 /* TVP.framework in Frameworks */,
+				17F0ECE61ECF419D0020B407 /* TVP.framework in Frameworks */,
+				17F0ECE71ECF41A80020B407 /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -260,10 +262,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1779E3B21ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */,
+			);
+			path = CenterCellCollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
 		17E037DD1EC47E1C008083BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17A084DA1ECC635B0023CF20 /* TVPBundle.bundle */,
 				17A084D61ECC63440023CF20 /* Fabric.framework */,
 				17A084D41ECC633A0023CF20 /* Crashlytics.framework */,
 				17E037E01EC47E29008083BE /* UserNotifications.framework */,
@@ -309,7 +318,8 @@
 		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				176B287F1ECDE0FB00A8FE54 /* TVP.framework */,
+				17F0ECE51ECF419D0020B407 /* TVP.framework */,
+				17F0ECDF1ECF401F0020B407 /* TVPBundle.bundle */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
@@ -328,6 +338,7 @@
 		EF3EBB9D1E712B3B00F4BF85 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				1779E3B21ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout */,
 				EF3EBBA41E712BAD00F4BF85 /* TVPage Player-Bridging-Header.h */,
 				EF676CAC1E9F8F9600CB06E0 /* DropDown View */,
 				EFDAD2901E9CE49500726DD3 /* Category */,
@@ -601,7 +612,7 @@
 				EF3EBB941E712AD000F4BF85 /* LaunchScreen.storyboard in Resources */,
 				EF4BC3011E716DD400A58330 /* Dosis-ExtraBold.ttf in Resources */,
 				EF4BC30A1E716DD400A58330 /* Dosis-SemiBold.otf in Resources */,
-				17A084DB1ECC635B0023CF20 /* TVPBundle.bundle in Resources */,
+				17F0ECE01ECF401F0020B407 /* TVPBundle.bundle in Resources */,
 				EF3EBB911E712ACF00F4BF85 /* Assets.xcassets in Resources */,
 				EF4BC3031E716DD400A58330 /* Dosis-ExtraLight.ttf in Resources */,
 				EF4BC3041E716DD400A58330 /* Dosis-Light.otf in Resources */,
@@ -675,6 +686,7 @@
 				EF3EBBF21E713E9B00F4BF85 /* UIView+WebCacheOperation.m in Sources */,
 				EF3EBBF71E713E9B00F4BF85 /* SVRadialGradientLayer.m in Sources */,
 				EF3EBBEA1E713E9B00F4BF85 /* SDWebImagePrefetcher.m in Sources */,
+				1779E3B41ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift in Sources */,
 				EF3EBBA81E7132EE00F4BF85 /* SideMenu.swift in Sources */,
 				EF3EBBE21E713E9B00F4BF85 /* MKAnnotationView+WebCache.m in Sources */,
 				EF7D53BA1EA742BB0080A53E /* SessionDelegate.swift in Sources */,

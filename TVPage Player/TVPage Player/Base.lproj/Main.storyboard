@@ -11,13 +11,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Dosis-Bold.ttf">
+        <array key="Dosis-Bold.otf">
             <string>Dosis-Bold</string>
         </array>
-        <array key="Dosis-Medium.otf">
+        <array key="Dosis-Medium.ttf">
             <string>Dosis-Medium</string>
         </array>
-        <array key="Dosis-Regular.ttf">
+        <array key="Dosis-Regular.otf">
             <string>Dosis-Regular</string>
         </array>
         <array key="Dosis-SemiBold.ttf">
@@ -228,10 +228,10 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="142"/>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Non-wQ-czo">
-                                                                            <rect key="frame" x="0.0" y="58" width="87.5" height="35"/>
+                                                                            <rect key="frame" x="0.0" y="58" width="73.5" height="35"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H83-a8-UP8" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                                    <rect key="frame" x="5" y="0.0" width="77.5" height="35"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="63.5" height="35"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.8784313725490196" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="mIA-cO-uNg"/>
@@ -315,32 +315,32 @@
                                                             <constraint firstAttribute="width" constant="64" id="CB3-RM-pSV"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="502" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j5Q-uV-QCS">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="502" contentMode="scaleToFill" bounces="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j5Q-uV-QCS">
                                                         <rect key="frame" x="0.0" y="74" width="375" height="240"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="240" id="WEm-xx-ZcG"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cMk-aI-lWW">
-                                                            <size key="itemSize" width="375" height="240"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cMk-aI-lWW" customClass="CenterCellCollectionViewFlowLayout" customModule="TVPage_Player" customModuleProvider="target">
+                                                            <size key="itemSize" width="330" height="240"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCollectHome502" id="jaL-40-hxL" customClass="cellCollectHome502" customModule="TVPage_Player" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="240"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="240"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="aUi-UM-zLF">
-                                                                            <rect key="frame" x="8" y="5" width="359" height="181"/>
+                                                                            <rect key="frame" x="8" y="5" width="314" height="181"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-wV-5bT" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="191" width="359" height="40"/>
+                                                                            <rect key="frame" x="8" y="191" width="314" height="40"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="40" id="4q1-t1-Zi0"/>
                                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="sg9-D9-0O6"/>
@@ -350,7 +350,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_btnPlay" translatesAutoresizingMaskIntoConstraints="NO" id="ZM5-5Z-uXE">
-                                                                            <rect key="frame" x="167" y="88" width="40" height="40"/>
+                                                                            <rect key="frame" x="145" y="88" width="40" height="40"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="40" id="41C-aa-Cua"/>
@@ -482,14 +482,14 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label  Label Label Label Label Label Label Label " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-Av-62H" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="141" width="359" height="37.5"/>
+                                                                            <rect key="frame" x="8" y="141" width="359" height="40.5"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-fL-14F" customClass="MTTextView" customModule="TVPage_Player" customModuleProvider="target">
-                                                                            <rect key="frame" x="8" y="181.5" width="359" height="140"/>
+                                                                            <rect key="frame" x="8" y="184.5" width="359" height="140"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="140" id="cLS-yQ-ZGg"/>
@@ -772,6 +772,9 @@
                                             <constraint firstItem="kAa-gB-tsh" firstAttribute="centerX" secondItem="Us4-cG-Aa7" secondAttribute="centerX" id="yhZ-uW-Hz6"/>
                                             <constraint firstItem="Fho-GY-Uc0" firstAttribute="top" secondItem="Us4-cG-Aa7" secondAttribute="top" constant="1821" id="ywI-0m-zCg"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="OyD-eL-B9j" id="Dyw-kg-HMZ"/>
+                                        </connections>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
@@ -949,7 +952,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7t-zp-GXG" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="14" width="44.5" height="23"/>
+                                                    <rect key="frame" x="10" y="14" width="39" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="SoX-uT-vKC"/>
                                                     </constraints>
@@ -2672,6 +2675,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in &lt;UIKit/UIView.h&gt; may also be helpful." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heb-hj-1yY">
+                                                <rect key="frame" x="8" y="505" width="359" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="gWK-yi-OgQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IZ-ap-NFK" customClass="UIControl">
                                                 <rect key="frame" x="0.0" y="661" width="375" height="49"/>
                                                 <subviews>
@@ -2693,15 +2705,6 @@
                                                     <constraint firstItem="L1y-Sj-2eX" firstAttribute="centerX" secondItem="6IZ-ap-NFK" secondAttribute="centerX" id="fyi-av-yu4"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in &lt;UIKit/UIView.h&gt; may also be helpful." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heb-hj-1yY">
-                                                <rect key="frame" x="8" y="505" width="359" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="gWK-yi-OgQ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2986,7 +2989,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRa-Cn-BWA" customClass="UIControl">
                                         <rect key="frame" x="10" y="343" width="300" height="49"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oik-nd-dar">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW DETAIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oik-nd-dar">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3221,10 +3224,10 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="142"/>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-XX-k83">
-                                                                            <rect key="frame" x="0.0" y="58" width="87.5" height="35"/>
+                                                                            <rect key="frame" x="0.0" y="58" width="73.5" height="35"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-EU-bnc" customClass="MTLabel" customModule="TVPage_Player" customModuleProvider="target">
-                                                                                    <rect key="frame" x="5" y="0.0" width="77.5" height="35"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="63.5" height="35"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.87843137250000003" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="5YR-X5-YM6"/>

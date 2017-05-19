@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let  imagePath: String? = bundle?.path(forResource: iconname, ofType: "png")
         let  image = UIImage(contentsOfFile: imagePath!)
         return image!
-        //return UIImage(named:iconname)!
+//        return UIImage(named:iconname)!
     }
     func showToastMessage(message:NSString) -> Void{
         HUD = MBProgressHUD.showAdded(to: self.window, animated: true)

@@ -97,7 +97,18 @@ class CategoryVC: MTViewController, UICollectionViewDelegate,UICollectionViewDat
             
             cell501.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
             cell501.lblName.text = dictionorydata.value(forKey:"title") as? String
-            cell501.lblRate.text = dictionorydata.value(forKey:"price") as? String
+            
+            let strPrice = NSString.init(format: "%@", dictionorydata.value(forKey:"price") as! CVarArg) as String
+            
+            if strPrice.length > 1 {
+                
+                cell501.lblRate.text = strPrice
+                
+            } else {
+                
+                cell501.lblRate.text = ""
+            }
+            
             cell501.ratingView.delegate = self;
             cell501.ratingView.emptySelectedImage = UIImage.init(named: "StarEmpty")
             cell501.ratingView.fullSelectedImage = UIImage.init(named: "StarFull")
