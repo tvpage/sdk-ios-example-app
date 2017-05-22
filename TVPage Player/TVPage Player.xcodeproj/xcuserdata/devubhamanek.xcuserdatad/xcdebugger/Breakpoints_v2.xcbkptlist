@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
-            timestampString = "516898166.806518"
+            timestampString = "517152314.363159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "isInternetConnectionAvailable(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,45 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TVPage Player/ViewController/ProductDetailVC.swift"
-            timestampString = "516695052.999914"
+            filePath = "TVPage Player/ViewController/PDPVC.swift"
+            timestampString = "517152314.363159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVPage Player/ViewController/CoffeRoastVC.swift"
-            timestampString = "516898166.806518"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVPage Player/ViewController/ProductCardVC.swift"
-            timestampString = "516892272.044144"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,45 +74,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/PDPVC.swift"
-            timestampString = "516898166.806518"
+            timestampString = "517152314.363159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "playVideoTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TVPage Player/ViewController/CategoryVC.swift"
-            timestampString = "516892296.188995"
+            filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
+            timestampString = "517152314.363159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
+            landmarkName = "getChannelVideoList()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVPage Player/FrameWork/TvPagePlayerView.swift"
-            timestampString = "516896340.728393"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "btn_FullScreenClicked(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.videoPlaybackVC.getChannelVideoList () -&gt; ()"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Desktop/Pankaj/TVPagePlayer/Source%20Code/Without%20Framework/TVPage%20Player/TVPage%20Player/ViewController/videoPlaybackVC.swift"
+                  timestampString = "517128502.502482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "456"
+                  endingLineNumber = "456"
+                  offsetFromSymbolStart = "684">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.videoPlaybackVC.(getChannelVideoList () -&gt; ()).(closure #1)"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Desktop/Pankaj/TVPagePlayer/Source%20Code/Without%20Framework/TVPage%20Player/TVPage%20Player/ViewController/videoPlaybackVC.swift"
+                  timestampString = "517128502.504809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "458"
+                  endingLineNumber = "458"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

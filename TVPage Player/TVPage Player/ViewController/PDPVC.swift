@@ -113,6 +113,7 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
         let initVC = self.storyboard?.instantiateViewController(withIdentifier: "videoPlaybackVC") as! videoPlaybackVC
         initVC.dictVideoData = arryCollect[indexPath.row] as! NSDictionary
         initVC.btnBackWidthConst = (Int(Scale.x * 44.0))
+        initVC.isVideoListOpen = false
         SNavigataionVC.pushViewController(initVC, animated:true)
     }
 //MARK: - Action Event
@@ -143,6 +144,7 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
         
         let initVC = self.storyboard?.instantiateViewController(withIdentifier: "videoPlaybackVC") as! videoPlaybackVC
         SMainRootVC.hideLeftView(animated: true, completionHandler: nil)
+        initVC.isVideoListOpen = false
         SNavigataionVC.pushViewController(initVC, animated: true)
     }
 }

@@ -153,6 +153,10 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
         let initVC = self.storyboard?.instantiateViewController(withIdentifier: "videoPlaybackVC") as! videoPlaybackVC
         initVC.dictVideoData = arrData[indexPath.row] as! NSDictionary
         initVC.btnBackWidthConst = (Int(Scale.x * 44.0))
+        initVC.strChannelID = (DictChannelData.value(forKey:"id")! as? String)!
+        initVC.isVideoListOpen = true
+        initVC.arrVideoList = self.arrData.mutableCopy() as! NSMutableArray
+        initVC.dataVideoLoadingPageNo = dataVideoLoadingPageNo
         SNavigataionVC.pushViewController(initVC, animated:true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -224,7 +228,15 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
                     if arrChannelVideolist.count != 0 {
                     
                         self.dataVideoLoadingPageNo += 1
-                        self.lblVideoCount.text = "\(self.arrTempData.count)"
+                        
+                        if self.arrData.count < 2 {
+                        
+                            self.lblVideoCount.text = "\(self.arrData.count) VIDEO"
+                            
+                        } else {
+                        
+                            self.lblVideoCount.text = "\(self.arrData.count) VIDEOS"
+                        }
                         self.tblCoffee.reloadData()
                     }
                 } else {

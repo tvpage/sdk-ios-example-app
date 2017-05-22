@@ -39,6 +39,15 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     var forloopIndex = 0
     var isGetProductsOnVideoAPICalling:Bool = false
     
+    //Video List
+    var arrVideoList = NSMutableArray()
+    var strChannelID = ""
+    @IBOutlet var collVideoList: UICollectionView!
+    var isChannelVideoListAPICalling = false
+    var isVideoListOpen = false
+    var dataVideoLoadingPageNo = 0
+    @IBOutlet var constraintHeightVideoList: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,25 +59,9 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
         self.collectVideoPlayback.isHidden = true
         isDownTapCall = false
         
-        TVPView = TVPagePlayerView.init(frame: CGRect(x: 50, y: 200, width: 350, height: 200))
-        self.viewTVP.addSubview(TVPView)
-        TVPView.delegate = self
-        viewTVP.layoutIfNeeded()
-        TVPView.show(frame: CGRect(x:0,y:0,width:viewTVP.frame.size.width,height:viewTVP.frame.size.height), view: self.viewTVP)
-        TVPView.getDATAandALLCheck(dict: dictVideoData as! [String : Any])
-        let dict_asset = dictVideoData.value(forKey:"asset") as! NSDictionary
-        lblDuration.text = ("Duration : \((dict_asset.value(forKey:"prettyDuration") as! String))")
-        lblVideoTitle.text = ("\( (dictVideoData.value(forKey:"title") as! String))")
-        
-        let dou_str = (dictVideoData.value(forKey:"date_created") as! String)
-        let date = NSDate(timeIntervalSince1970: Double(dou_str)!)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from:date as Date)
-        lblPublishDate.text = ("PublishDate : \(dateString)")
-        scrollView.delaysContentTouches = false
-        
+        self.videoPlayerSetup(dictVideoDetails: dictVideoData)
         self.getProductsOnVideoAPICalling()
+        self.getChannelVideoList()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
@@ -141,30 +134,90 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arryCollect.count
+        
+        if collectVideoPlayback == collectionView {
+        
+            return arryCollect.count
+            
+        } else if collVideoList == collectionView {
+        
+            if isVideoListOpen == true {
+                
+                constraintHeightVideoList.constant = (CGFloat(Int((133.0)) + Int((250 * arrVideoList.count))))
+                
+            } else {
+            
+                constraintHeightVideoList.constant = 0
+            }
+            
+            return arrVideoList.count
+            
+        } else {
+        
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellVideoPlayback", for: indexPath) as! cellVideoPlayback
-        let dictionorydata = arryCollect[indexPath.row] as! NSDictionary
-        let url_string = dictionorydata.value(forKey:"imageUrl") as! String
-        let url =  URL(string:url_string)!
-        cell.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
-        return cell
+        
+        if collectVideoPlayback == collectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellVideoPlayback", for: indexPath) as! cellVideoPlayback
+            let dictionorydata = arryCollect[indexPath.row] as! NSDictionary
+            let url_string = dictionorydata.value(forKey:"imageUrl") as! String
+            let url =  URL(string:url_string)!
+            cell.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            return cell
+            
+        } else if collVideoList == collectionView {
+            
+            let cell503 = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollectVideo504", for: indexPath) as! cellCollectVideo504
+            let dictionorydata = arrVideoList[indexPath.row] as! NSDictionary
+            let dict_asset = dictionorydata.value(forKey:"asset") as! NSDictionary
+            let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            let url =  URL(string:url_string)!
+            cell503.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell503.lblTitle.text = dictionorydata.value(forKey:"title") as? String
+            return cell503
+            
+        } else {
+        
+            let cell = MTCollectionCell()
+            return cell
+        }
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectVideoPlayback.frame.size.height, height: self.collectVideoPlayback.frame.size.height)
+        
+        if collectVideoPlayback == collectionView {
+            
+            return CGSize(width: self.collectVideoPlayback.frame.size.height, height: self.collectVideoPlayback.frame.size.height)
+            
+        } else if collVideoList == collectionView {
+            
+            return CGSize(width: collVideoList.frame.size.width, height: 250)
+            
+        } else {
+        
+            return CGSize(width: 0, height: 0)
+        }
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.callProductClickAnalytics(dict: arryCollect.object(at: indexPath.row) as! NSDictionary)
-        let initVC = self.storyboard?.instantiateViewController(withIdentifier: "ProductCardVC") as! ProductCardVC
-        SMainRootVC.hideLeftView(animated: true, completionHandler: nil)
-        initVC.arr_collection_view.addObjects(from: [arryCollect])
-        initVC.selectedIndex = indexPath.row
-        self.present(initVC, animated: true, completion: nil)
+        if collectVideoPlayback == collectionView {
+            
+            self.callProductClickAnalytics(dict: arryCollect.object(at: indexPath.row) as! NSDictionary)
+            let initVC = self.storyboard?.instantiateViewController(withIdentifier: "ProductCardVC") as! ProductCardVC
+            SMainRootVC.hideLeftView(animated: true, completionHandler: nil)
+            initVC.arr_collection_view.addObjects(from: [arryCollect])
+            initVC.selectedIndex = indexPath.row
+            self.present(initVC, animated: true, completion: nil)
+            
+        } else if collVideoList == collectionView {
+        
+            print("Video Selected : \(indexPath.row)")
+            
+            self.videoPlayerSetup(dictVideoDetails: arrVideoList[indexPath.row] as! NSDictionary)
+        }
     }
 //MARK: - Action Event
     
@@ -219,7 +272,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
         let labelHeight = rectForText(text: lblDiscription.text! , font: UIFont(name: FontName.DosisRegular, size: CGFloat(14))!)
         if !isDownTapCall {
             
-            self.lblDiscriptHeight.constant = labelHeight
+            self.lblDiscriptHeight.constant = labelHeight + 7
             self.isDownTapCall = true
             self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
             
@@ -237,6 +290,10 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
                 self.view.layoutIfNeeded()
             }, completion: nil)
         }
+    }
+    @IBAction func tappedOnLoadMoreVideo(_ sender: Any) {
+        
+        self.getChannelVideoList()
     }
 //MARK: - calculate Label Height
     func rectForText(text: String, font: UIFont) -> CGFloat {
@@ -365,5 +422,99 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+    }
+//MARK: - Get Channel Video List
+    func getChannelVideoList() {
+        
+        if isVideoListOpen == true {
+        
+            if isChannelVideoListAPICalling == false {
+                
+                isChannelVideoListAPICalling = true
+                
+                if arrVideoList.count == 0 {
+                    
+                    appDelegateShared.showHud()
+                }
+                
+                print("dataVideoLoadingPageNo : \(dataVideoLoadingPageNo)")
+                
+                TvpApiClass.ChannelVideoList(strLoginID: appDelegateShared.loginID, strChhanelID: strChannelID, searchString: "", pageNumber: dataVideoLoadingPageNo, numberOfVideo: 5) { (arrChannelVideolist:NSArray,strerror:String) in
+                    
+                    self.isChannelVideoListAPICalling = false
+                    print(strerror)
+                    appDelegateShared.dismissHud()
+                    
+                    if strerror == "" {
+                        
+                        for videoData in arrChannelVideolist {
+                            
+                            self.arrVideoList.add(videoData)
+                        }
+                        
+                        if self.dataVideoLoadingPageNo == 0 && self.arrVideoList.count != 0 {
+                            
+                            //self.tblCoffee.tableFooterView = self.viewTableFooter
+                        }
+                        
+                        if arrChannelVideolist.count != 0 {
+                            
+                            self.dataVideoLoadingPageNo += 1
+                            //self.lblVideoCount.text = "\(self.arrTempData.count)"
+                            self.collVideoList.reloadData()
+                        }
+                    } else {
+                        
+                        appDelegateShared.showToastMessage(message: strerror as NSString)
+                    }
+                }
+            }
+            
+        } else {
+        
+            constraintHeightVideoList.constant = 0.0
+        }
+    }
+//MARK: - Video player setup 
+    func videoPlayerSetup(dictVideoDetails: NSDictionary) {
+    
+        if TVPView != nil {
+        
+            TVPView.stopPlayer()
+            TVPView.removeFromSuperview()
+            TVPView = nil
+        }
+        
+        lblDiscription.text = NSString.init(format: "%@", dictVideoDetails.value(forKey: "title") as! CVarArg) as String
+        
+        let labelHeight = rectForText(text: lblDiscription.text! , font: UIFont(name: FontName.DosisRegular, size: CGFloat(14))!)
+        if isDownTapCall == true {
+            
+            self.lblDiscriptHeight.constant = labelHeight + 7
+            
+            UIView.animate(withDuration: 0.3, animations:{
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+            
+        }
+        
+        TVPView = TVPagePlayerView.init(frame: CGRect(x: 50, y: 200, width: 350, height: 200))
+        self.viewTVP.addSubview(TVPView)
+        TVPView.delegate = self
+        viewTVP.layoutIfNeeded()
+        TVPView.show(frame: CGRect(x:0,y:0,width:viewTVP.frame.size.width,height:viewTVP.frame.size.height), view: self.viewTVP)
+        
+        TVPView.getDATAandALLCheck(dict: dictVideoDetails as! [String : Any])
+        let dict_asset = dictVideoDetails.value(forKey:"asset") as! NSDictionary
+        lblDuration.text = ("Duration : \((dict_asset.value(forKey:"prettyDuration") as! String))")
+        lblVideoTitle.text = ("\( (dictVideoDetails.value(forKey:"title") as! String))")
+        
+        let dou_str = (dictVideoDetails.value(forKey:"date_created") as! String)
+        let date = NSDate(timeIntervalSince1970: Double(dou_str)!)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from:date as Date)
+        lblPublishDate.text = ("PublishDate : \(dateString)")
+        scrollView.delaysContentTouches = false
     }
 }

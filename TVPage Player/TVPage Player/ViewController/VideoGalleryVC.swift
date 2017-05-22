@@ -43,9 +43,7 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arryBrand = ["brandLogo_NinjaCoffeeBar",
-                     "brandLogo_Keurig",
-                     "brandLogo_Cuisinart"]
+        arryBrand = ["brandLogo_NinjaCoffeeBar"]
         
         arryVideoList = appDelegateShared.arrVideoList.mutableCopy() as! NSMutableArray
         
@@ -144,7 +142,7 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
             
         } else if collectionView.tag == 503 {
             
-            return CGSize(width: 125, height: collectBrandlist.frame.size.height)
+            return CGSize(width: collectBrandlist.frame.size.width, height: collectBrandlist.frame.size.height)
             
         }
         return CGSize(width: 0, height: 0)
@@ -179,6 +177,10 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
             let initVC = self.storyboard?.instantiateViewController(withIdentifier: "videoPlaybackVC") as! videoPlaybackVC
             initVC.dictVideoData = arryVideoList[indexPath.row] as! NSDictionary
             initVC.btnBackWidthConst = (Int(Scale.x * 44.0))
+            initVC.isVideoListOpen = true
+            initVC.strChannelID = appDelegateShared.ChannelID
+            initVC.arrVideoList = appDelegateShared.arrVideoList.mutableCopy() as! NSMutableArray
+            initVC.dataVideoLoadingPageNo = appDelegateShared.videoPageNumber
             SNavigataionVC.pushViewController(initVC, animated:true)
         }
     }

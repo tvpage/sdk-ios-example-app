@@ -155,6 +155,7 @@ class CategoryVC: MTViewController, UICollectionViewDelegate,UICollectionViewDat
             let initVC = self.storyboard?.instantiateViewController(withIdentifier: "videoPlaybackVC") as! videoPlaybackVC
             initVC.dictVideoData = appDelegateShared.arrVideoList[indexPath.row] as! NSDictionary
             initVC.btnBackWidthConst = (Int(Scale.x * 44.0))
+            initVC.isVideoListOpen = false
             SNavigataionVC.pushViewController(initVC, animated:true)
         }
     }
