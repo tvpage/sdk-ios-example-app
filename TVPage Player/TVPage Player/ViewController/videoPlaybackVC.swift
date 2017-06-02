@@ -50,7 +50,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
         //Notification observer
         NotificationCenter.default.addObserver(self, selector: #selector(isInternetConnectionAvailable), name: NSNotification.Name(rawValue: "isInternetConnectionAvailable"), object: nil)
         
@@ -215,7 +215,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
         } else if collVideoList == collectionView {
         
             print("Video Selected : \(indexPath.row)")
-            
+            scrollView.setContentOffset(CGPoint.zero, animated: true)
             self.videoPlayerSetup(dictVideoDetails: arrVideoList[indexPath.row] as! NSDictionary)
         }
     }
@@ -274,7 +274,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
             
             self.lblDiscriptHeight.constant = labelHeight + 7
             self.isDownTapCall = true
-            self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+            self.imgDown.transform = CGAffineTransform(rotationAngle: 0)
             
             UIView.animate(withDuration: 0.3, animations:{
                 self.view.layoutIfNeeded()
@@ -284,7 +284,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
             
             self.lblDiscriptHeight.constant = 0
             self.isDownTapCall = false
-            self.imgDown.transform = CGAffineTransform(rotationAngle: 0)
+            self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
             
             UIView.animate(withDuration: 0.3, animations:{
                 self.view.layoutIfNeeded()

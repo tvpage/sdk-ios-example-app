@@ -33,7 +33,7 @@ class ProductCardVC: MTViewController, UICollectionViewDelegate, UICollectionVie
         self.RattingView.delegate = self;
         self.RattingView.emptySelectedImage = UIImage.init(named: "StarEmpty")
         self.RattingView.fullSelectedImage = UIImage.init(named: "StarFull")
-        self.RattingView.contentMode = .scaleAspectFill
+        self.RattingView.contentMode = .scaleAspectFit
         self.RattingView.maxRating = 5;
         self.RattingView.minRating = 0;
         self.RattingView.rating = 2.6;

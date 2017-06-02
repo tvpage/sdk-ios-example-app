@@ -65,38 +65,6 @@
             endingLineNumber = "1069"
             landmarkName = "getState()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TVPage_Player.TvPagePlayerView.getVolume () -&gt; Swift.Int"
-                  moduleName = "TVPage Player"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dilipmanek/Desktop/Final_TVP/App/TVPage%20Player/TVPage%20Player/FrameWork/TvPagePlayerView.swift"
-                  timestampString = "515050218.855845"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1069"
-                  endingLineNumber = "1069"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TVPage_Player.TvPagePlayerView.getVolume () -&gt; Swift.Int"
-                  moduleName = "TVPage Player"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dilipmanek/Desktop/Final_TVP/App/TVPage%20Player/TVPage%20Player/FrameWork/TvPagePlayerView.swift"
-                  timestampString = "515050218.857161"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1069"
-                  endingLineNumber = "1069"
-                  offsetFromSymbolStart = "444">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
