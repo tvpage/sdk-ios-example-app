@@ -87,7 +87,6 @@
 		EF7D53BD1EA742BB0080A53E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D53A71EA742BB0080A53E /* Timeline.swift */; };
 		EF7D53BF1EA742BB0080A53E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D53AD1EA742BB0080A53E /* Validation.swift */; };
 		EF92F86D1EE1921600D07843 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF92F86C1EE1921600D07843 /* TVP.framework */; };
-		EF92F86E1EE1922100D07843 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF92F86C1EE1921600D07843 /* TVP.framework */; };
 		EF92F86F1EE1922100D07843 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF92F86C1EE1921600D07843 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF98C1021E88D4D2006FAA88 /* ProductCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98C1011E88D4D2006FAA88 /* ProductCardVC.swift */; };
 		EFAB53521E9BC472007AF48A /* VideoGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB53511E9BC472007AF48A /* VideoGalleryVC.swift */; };
@@ -248,7 +247,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF92F86D1EE1921600D07843 /* TVP.framework in Frameworks */,
-				EF92F86E1EE1922100D07843 /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -787,7 +785,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "TVPage Player";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -854,6 +852,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -882,6 +894,20 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";

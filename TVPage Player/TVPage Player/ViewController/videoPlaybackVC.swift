@@ -50,7 +50,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+        self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         //Notification observer
         NotificationCenter.default.addObserver(self, selector: #selector(isInternetConnectionAvailable), name: NSNotification.Name(rawValue: "isInternetConnectionAvailable"), object: nil)
         
@@ -284,8 +284,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
             
             self.lblDiscriptHeight.constant = 0
             self.isDownTapCall = false
-            self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
-            
+            self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
             UIView.animate(withDuration: 0.3, animations:{
                 self.view.layoutIfNeeded()
             }, completion: nil)

@@ -165,7 +165,6 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
                                 for view in self.collectHome502.subviews {
                                     
                                     if view is UIImageView {
-                                        
                                         let imageView = view as? UIImageView
                                         imageView?.isHidden = false
                                         imageView?.layer.removeAllAnimations()

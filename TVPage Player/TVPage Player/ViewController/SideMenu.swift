@@ -30,7 +30,8 @@ class SideMenu: MTViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        arryTitleName = ["HOME","COFFEE","EQUIPMENT","DRINKWARE","OUR BLOG","VIDEO GALLERY"]
+//        arryTitleName = ["HOME","COFFEE","EQUIPMENT","DRINKWARE","OUR BLOG","VIDEO GALLERY"]
+        arryTitleName = ["HOME","VIDEO GALLERY"]
     }
     override func didReceiveMemoryWarning() {
         
@@ -48,7 +49,7 @@ class SideMenu: MTViewController, UITableViewDataSource, UITableViewDelegate {
         cell.imgLogoName.image = UIImage.init(named: "")
         cell.lblMinXConst.constant = 10
         
-        if (indexPath.row == 5) {
+        if (indexPath.row == 1) {
             
             cell.lblMinXConst.constant = 44
             cell.imgLogoName.image = UIImage.init(named: "ondemand_video")
@@ -77,7 +78,7 @@ class SideMenu: MTViewController, UITableViewDataSource, UITableViewDelegate {
 //            SMainRootVC.hideLeftView(animated: true, completionHandler: nil)
 //            SNavigataionVC.pushViewController(initVC, animated: false)
 //        }
-        else if indexPath.row == 5 {
+        else if indexPath.row == 1 {
             
             let initVC = self.storyboard?.instantiateViewController(withIdentifier: "VideoGalleryVC") as! VideoGalleryVC
             SMainRootVC.hideLeftView(animated: true, completionHandler: nil)
