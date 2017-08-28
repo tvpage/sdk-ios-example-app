@@ -11,6 +11,7 @@
 		179D0A101ED31CCB00D536FF /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */; };
 		17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D41ECC633A0023CF20 /* Crashlytics.framework */; };
 		17A084D71ECC63440023CF20 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D61ECC63440023CF20 /* Fabric.framework */; };
+		17B6FD111F5468C400BDDF11 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B6FD101F5468C400BDDF11 /* TVP.framework */; };
 		17E037DC1EC47CA7008083BE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E037DB1EC47CA7008083BE /* Reachability.swift */; };
 		17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */; };
 		17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037E01EC47E29008083BE /* UserNotifications.framework */; };
@@ -86,8 +87,6 @@
 		EF7D53BC1EA742BB0080A53E /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D53A61EA742BB0080A53E /* TaskDelegate.swift */; };
 		EF7D53BD1EA742BB0080A53E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D53A71EA742BB0080A53E /* Timeline.swift */; };
 		EF7D53BF1EA742BB0080A53E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D53AD1EA742BB0080A53E /* Validation.swift */; };
-		EF92F86D1EE1921600D07843 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF92F86C1EE1921600D07843 /* TVP.framework */; };
-		EF92F86F1EE1922100D07843 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF92F86C1EE1921600D07843 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF98C1021E88D4D2006FAA88 /* ProductCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98C1011E88D4D2006FAA88 /* ProductCardVC.swift */; };
 		EFAB53521E9BC472007AF48A /* VideoGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAB53511E9BC472007AF48A /* VideoGalleryVC.swift */; };
 		EFDAD2971E9CE49500726DD3 /* NSArray+NullReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAD2921E9CE49500726DD3 /* NSArray+NullReplacement.m */; };
@@ -102,7 +101,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EF92F86F1EE1922100D07843 /* TVP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +122,7 @@
 		179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
 		17A084D41ECC633A0023CF20 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17A084D61ECC63440023CF20 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		17B6FD101F5468C400BDDF11 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		17E037DB1EC47CA7008083BE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17E037E01EC47E29008083BE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -230,7 +229,6 @@
 		EF7D53A61EA742BB0080A53E /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
 		EF7D53A71EA742BB0080A53E /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		EF7D53AD1EA742BB0080A53E /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		EF92F86C1EE1921600D07843 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		EF98C1011E88D4D2006FAA88 /* ProductCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCardVC.swift; sourceTree = "<group>"; };
 		EFAB53511E9BC472007AF48A /* VideoGalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGalleryVC.swift; sourceTree = "<group>"; };
 		EFDAD2911E9CE49500726DD3 /* NSArray+NullReplacement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NullReplacement.h"; sourceTree = "<group>"; };
@@ -246,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF92F86D1EE1921600D07843 /* TVP.framework in Frameworks */,
+				17B6FD111F5468C400BDDF11 /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -313,7 +311,7 @@
 		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				EF92F86C1EE1921600D07843 /* TVP.framework */,
+				17B6FD101F5468C400BDDF11 /* TVP.framework */,
 				179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */,
 			);
 			path = FrameWork;
@@ -866,9 +864,10 @@
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvpageplayer;
@@ -909,9 +908,10 @@
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvpageplayer;

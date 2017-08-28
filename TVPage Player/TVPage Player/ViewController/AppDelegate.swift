@@ -86,11 +86,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK:- show Toast Message
     func getIconimage(iconname:String) -> UIImage {
         let  bundle = Bundle(url: Bundle.main.url(forResource: "TVPBundle", withExtension: "bundle")!)
-        let  imagePath: String? = bundle?.path(forResource: iconname, ofType: "png")
-        let  image = UIImage(contentsOfFile: imagePath!)
-        return image!
-//        return UIImage(named:iconname)!
+        var  imagePath: String? = bundle?.path(forResource: iconname, ofType: "png")
+        var  image = UIImage()
+        if imagePath != nil{
+            image = UIImage(contentsOfFile: imagePath!)!
+        }else{
+            imagePath = bundle?.path(forResource: "placeholder", ofType: "png")
+            image = UIImage(contentsOfFile: imagePath!)!
+        }
+        return image
     }
+    
     func showToastMessage(message:NSString) -> Void{
         HUD = MBProgressHUD.showAdded(to: self.window, animated: true)
         HUD?.mode = MBProgressHUDModeText
