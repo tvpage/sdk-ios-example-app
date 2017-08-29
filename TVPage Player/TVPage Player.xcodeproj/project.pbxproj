@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1733C1B91F55A61200A46451 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1733C1B81F55A61200A46451 /* TVP.framework */; };
+		1733C1BA1F55A62300A46451 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1733C1B81F55A61200A46451 /* TVP.framework */; };
+		1733C1BB1F55A62300A46451 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1733C1B81F55A61200A46451 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1779E3B41ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */; };
 		179D0A101ED31CCB00D536FF /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */; };
 		17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D41ECC633A0023CF20 /* Crashlytics.framework */; };
 		17A084D71ECC63440023CF20 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D61ECC63440023CF20 /* Fabric.framework */; };
-		17B6FD111F5468C400BDDF11 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B6FD101F5468C400BDDF11 /* TVP.framework */; };
 		17E037DC1EC47CA7008083BE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E037DB1EC47CA7008083BE /* Reachability.swift */; };
 		17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */; };
 		17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E037E01EC47E29008083BE /* UserNotifications.framework */; };
@@ -101,6 +103,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1733C1BB1F55A62300A46451 /* TVP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,11 +121,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1733C1B81F55A61200A46451 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
 		17A084D41ECC633A0023CF20 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17A084D61ECC63440023CF20 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		17B6FD101F5468C400BDDF11 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		17E037DB1EC47CA7008083BE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		17E037DE1EC47E1C008083BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17E037E01EC47E29008083BE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -244,7 +247,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B6FD111F5468C400BDDF11 /* TVP.framework in Frameworks */,
+				1733C1B91F55A61200A46451 /* TVP.framework in Frameworks */,
+				1733C1BA1F55A62300A46451 /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -311,7 +315,7 @@
 		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				17B6FD101F5468C400BDDF11 /* TVP.framework */,
+				1733C1B81F55A61200A46451 /* TVP.framework */,
 				179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */,
 			);
 			path = FrameWork;
@@ -843,12 +847,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: TVPage, Inc. (657YYPPT89)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: TVPage, Inc. (657YYPPT89)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gautam Sareriya (3LRBG6L46K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gautam Sareriya (3LRBG6L46K)";
 				DEVELOPMENT_TEAM = 657YYPPT89;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
@@ -872,8 +879,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tvpageplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a40406a0-472e-4a3c-9e2f-ee8851bf374a";
-				PROVISIONING_PROFILE_SPECIFIER = TVPageAppStore;
+				PROVISIONING_PROFILE = "729d49ba-4bfc-4e68-8586-374e756199c5";
+				PROVISIONING_PROFILE_SPECIFIER = TVPageDevProvision;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TVPage Player/ThirdParty/TVPage Player-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -893,6 +900,9 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
