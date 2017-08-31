@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
-            timestampString = "517152314.363159"
+            timestampString = "525884953.997744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
             landmarkName = "isInternetConnectionAvailable(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
-            timestampString = "517152314.363159"
+            timestampString = "525884953.997744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
+            startingLineNumber = "457"
+            endingLineNumber = "457"
             landmarkName = "getChannelVideoList()"
             landmarkType = "7">
             <Locations>

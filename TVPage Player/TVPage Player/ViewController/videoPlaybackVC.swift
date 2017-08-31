@@ -48,6 +48,9 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     var dataVideoLoadingPageNo = 0
     @IBOutlet var constraintHeightVideoList: NSLayoutConstraint!
     
+    //Test variable
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imgDown.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
@@ -69,6 +72,17 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
         self.lblDiscriptHeight.constant = 0
         
         TVPView.resumePlayer()
+        
+        if #available(iOS 10.0, *) {
+            timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { (timer) in
+                print(self.TVPView.getQualityLevels())
+                print(self.TVPView.getQuality())
+                
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         
@@ -338,6 +352,8 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
     func tvPlayerMediaVideoplaying(flag: Bool) {
         
         print("delegate_playing:\(flag)")
+        print(self.TVPView.getQualityLevels())
+        print(self.TVPView.getQuality())
     }
     func tvPlayerMediaVideopaused(flag: Bool) {
         
