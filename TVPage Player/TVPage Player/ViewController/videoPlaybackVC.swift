@@ -531,5 +531,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
         let dateString = dateFormatter.string(from:date as Date)
         lblPublishDate.text = ("PublishDate : \(dateString)")
         scrollView.delaysContentTouches = false
+        
+        TVPView.setQuality(index: 1)
     }
 }
