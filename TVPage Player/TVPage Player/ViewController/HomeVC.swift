@@ -59,6 +59,8 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
     var isChannelVideoListAPICalling = false
     var isLatestVideoScrollingIndicatorVisible = false
     
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -302,7 +304,7 @@ class HomeVC: MTViewController, UITableViewDelegate, UITableViewDataSource,UICol
             let dict_asset = dictionorydata.value(forKey:"asset") as! NSDictionary
             let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
             let url =  URL(string:url_string)!
-            cell502.imgName.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell502.imgName.sd_setImage(with: url, placeholderImage: TVPView.getIconimage(iconname: "placeholder"))
             cell502.lblName.text = dictionorydata.value(forKey:"title") as? String
             return cell502
             

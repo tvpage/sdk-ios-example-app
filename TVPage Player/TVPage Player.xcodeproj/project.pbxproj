@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17648A461F59A31D00DFF044 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17648A451F59A31D00DFF044 /* TVP.framework */; };
-		17648A471F59A32500DFF044 /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17648A451F59A31D00DFF044 /* TVP.framework */; };
-		17648A481F59A32500DFF044 /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17648A451F59A31D00DFF044 /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1779E3B41ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */; };
+		17826BF71F62EB0900D01B4A /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17826BF61F62EB0900D01B4A /* TVP.framework */; };
+		17826BF81F62EB0C00D01B4A /* TVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17826BF61F62EB0900D01B4A /* TVP.framework */; };
+		17826BF91F62EB0C00D01B4A /* TVP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17826BF61F62EB0900D01B4A /* TVP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		179D0A101ED31CCB00D536FF /* TVPBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */; };
 		17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D41ECC633A0023CF20 /* Crashlytics.framework */; };
 		17A084D71ECC63440023CF20 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A084D61ECC63440023CF20 /* Fabric.framework */; };
@@ -103,7 +103,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17648A481F59A32500DFF044 /* TVP.framework in Embed Frameworks */,
+				17826BF91F62EB0C00D01B4A /* TVP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,8 +121,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		17648A451F59A31D00DFF044 /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		1779E3B31ECF11140025B7B5 /* CenterCellCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterCellCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		17826BF61F62EB0900D01B4A /* TVP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TVP.framework; sourceTree = "<group>"; };
 		179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TVPBundle.bundle; sourceTree = "<group>"; };
 		17A084D41ECC633A0023CF20 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		17A084D61ECC63440023CF20 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -247,8 +247,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17648A461F59A31D00DFF044 /* TVP.framework in Frameworks */,
-				17648A471F59A32500DFF044 /* TVP.framework in Frameworks */,
+				17826BF71F62EB0900D01B4A /* TVP.framework in Frameworks */,
+				17826BF81F62EB0C00D01B4A /* TVP.framework in Frameworks */,
 				17E037E11EC47E29008083BE /* UserNotifications.framework in Frameworks */,
 				17A084D51ECC633A0023CF20 /* Crashlytics.framework in Frameworks */,
 				17E037DF1EC47E1C008083BE /* SystemConfiguration.framework in Frameworks */,
@@ -315,7 +315,7 @@
 		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				17648A451F59A31D00DFF044 /* TVP.framework */,
+				17826BF61F62EB0900D01B4A /* TVP.framework */,
 				179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */,
 			);
 			path = FrameWork;
@@ -879,6 +879,10 @@
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -907,6 +911,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
 					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",

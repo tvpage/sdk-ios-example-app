@@ -180,7 +180,7 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
             let dictionorydata = arryCollect[indexPath.row] as! NSDictionary
             let url_string = dictionorydata.value(forKey:"imageUrl") as! String
             let url =  URL(string:url_string)!
-            cell.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell.imgName.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
             return cell
             
         } else if collVideoList == collectionView {
@@ -188,9 +188,12 @@ class videoPlaybackVC:MTViewController, UICollectionViewDelegate, UICollectionVi
             let cell503 = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollectVideo504", for: indexPath) as! cellCollectVideo504
             let dictionorydata = arrVideoList[indexPath.row] as! NSDictionary
             let dict_asset = dictionorydata.value(forKey:"asset") as! NSDictionary
-            let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            var url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            if !url_string.hasPrefix("http"){
+                url_string = "http:" + url_string
+            }
             let url =  URL(string:url_string)!
-            cell503.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell503.imgName.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
             cell503.lblTitle.text = dictionorydata.value(forKey:"title") as? String
             return cell503
             

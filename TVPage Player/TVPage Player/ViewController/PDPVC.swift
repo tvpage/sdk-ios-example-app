@@ -30,6 +30,8 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
     
     @IBOutlet var imgProduct: UIImageView!
     
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -59,7 +61,7 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
         
         let url_string = dictProductData.value(forKey:"imageUrl") as! String
         let url =  URL(string:url_string)!
-        imgProduct.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))
+        imgProduct.sd_setImage(with: url, placeholderImage: TVPView.getIconimage(iconname: "placeholder"))
             serviceCall ()
     }
     func serviceCall() {
@@ -100,7 +102,7 @@ class PDPVC: MTViewController, UICollectionViewDelegate, UICollectionViewDataSou
         let dict_asset = dictionorydata.value(forKey:"asset") as! NSDictionary
         let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
         let url =  URL(string:url_string)!
-        cell.imgName.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))
+        cell.imgName.sd_setImage(with: url, placeholderImage: TVPView.getIconimage(iconname: "placeholder"))
         cell.lblName.text = dictionorydata.value(forKey:"title") as? String
         return cell
     }

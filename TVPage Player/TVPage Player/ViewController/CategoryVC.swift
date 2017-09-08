@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import TVP
 
 class cellCategory501: MTCollectionCell {
     
@@ -32,6 +33,8 @@ class CategoryVC: MTViewController, UICollectionViewDelegate,UICollectionViewDat
     @IBOutlet var collectCategory502: UICollectionView!
     
     @IBOutlet var ProductListConstraint: NSLayoutConstraint!
+    
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
     
     override func viewDidLoad() {
         
@@ -95,7 +98,7 @@ class CategoryVC: MTViewController, UICollectionViewDelegate,UICollectionViewDat
             let url_string = dictionorydata.value(forKey:"imageUrl") as! String
             let url =  URL(string:url_string)!
             
-            cell501.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell501.imgName.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
             cell501.lblName.text = dictionorydata.value(forKey:"title") as? String
             
             let strPrice = NSString.init(format: "%@", dictionorydata.value(forKey:"price") as! CVarArg) as String
@@ -130,7 +133,7 @@ class CategoryVC: MTViewController, UICollectionViewDelegate,UICollectionViewDat
             let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
             let url =  URL(string:url_string)!
             
-            cell502.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell502.imgName.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
             cell502.lblName.text = dictionorydata.value(forKey:"title") as? String
             
             return cell502

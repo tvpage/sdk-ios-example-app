@@ -46,6 +46,8 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
     var dropDownView = DropDownView()
     var dataVideoLoadingPageNo = 0
     
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -179,9 +181,12 @@ class CoffeRoastVC: MTViewController, UITableViewDelegate, UITableViewDataSource
             let dic = arrData[indexPath.row] as! NSDictionary
             cell.lblVideoDetail.text = dic.object(forKey: "title") as? String
             let dict_asset = dic.value(forKey:"asset") as! NSDictionary
-            let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            var url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            if !url_string.hasPrefix("http"){
+                url_string = "http:" + url_string
+            }
             let url =  URL(string:url_string)!
-            cell.imgVideo.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell.imgVideo.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
         }
         return cell
     }

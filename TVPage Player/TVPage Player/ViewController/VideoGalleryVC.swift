@@ -40,6 +40,8 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
     var arryVideoList = NSMutableArray()
     var isChannelVideoListAPICalling = false
     
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,12 +102,12 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
             let url_string = dict_asset.value(forKey:"canvasUrl") as! String
             let urlWithHttps = "https:\(url_string)"
             let url =  URL(string:urlWithHttps)!
-            cell.imgName.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell.imgName.sd_setImage(with: url, placeholderImage: TVPView.getIconimage(iconname: "placeholder"))
             
         } else {
             
             let url =  URL(string:"")
-            cell.imgName.sd_setImage(with: url, placeholderImage: appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell.imgName.sd_setImage(with: url, placeholderImage: TVPView.getIconimage(iconname: "placeholder"))
         }
         cell.lblName.text = dictionorydata.value(forKey:"title")! as? String
         cell.selectionStyle = .none
@@ -154,9 +156,12 @@ class VideoGalleryVC: MTViewController ,  UITableViewDelegate, UITableViewDataSo
             let cell503 = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollectVideo504", for: indexPath) as! cellCollectVideo504
             let dictionorydata = arryVideoList[indexPath.row] as! NSDictionary
             let dict_asset = dictionorydata.value(forKey:"asset") as! NSDictionary
-            let url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            var url_string = dict_asset.value(forKey:"thumbnailUrl") as! String
+            if !url_string.hasPrefix("http"){
+                url_string = "http:" + url_string
+            }
             let url =  URL(string:url_string)!
-            cell503.imgName.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+            cell503.imgName.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
             cell503.lblTitle.text = dictionorydata.value(forKey:"title") as? String
             return cell503
             

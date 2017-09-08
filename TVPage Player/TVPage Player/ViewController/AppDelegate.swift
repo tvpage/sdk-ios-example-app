@@ -11,6 +11,7 @@ import Fabric
 import Crashlytics
 import SystemConfiguration
 import UserNotifications
+import TVP
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var ChannelID = "87486517"
     
     //Global Login id and Channel id
-    var loginID = "1758799"
+//    var loginID = "1758799"
+//    var ChannelID = "66133905"
+    
+    //From client
+    var loginID = "1758166" // 1758987 1758166
     var ChannelID = "66133905"
     
     var arrVideoList = NSMutableArray()

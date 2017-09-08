@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
-            timestampString = "525884953.997744"
+            timestampString = "526577130.585221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "isInternetConnectionAvailable(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -65,6 +65,38 @@
             endingLineNumber = "114"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.PDPVC.collectionView (__ObjC.UICollectionView, didSelectItemAt : Foundation.IndexPath) -&gt; ()"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Documents/Bitbucket_Projects/TVPagePlayer/TVPage%20Player/TVPage%20Player/ViewController/PDPVC.swift"
+                  timestampString = "526577897.557874"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.PDPVC.collectionView (__ObjC.UICollectionView, didSelectItemAt : Foundation.IndexPath) -&gt; ()"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Documents/Bitbucket_Projects/TVPagePlayer/TVPage%20Player/TVPage%20Player/ViewController/PDPVC.swift"
+                  timestampString = "526577897.559664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "872">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,6 +113,38 @@
             endingLineNumber = "146"
             landmarkName = "playVideoTap(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.PDPVC.playVideoTap (Any) -&gt; ()"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Documents/Bitbucket_Projects/TVPagePlayer/TVPage%20Player/TVPage%20Player/ViewController/PDPVC.swift"
+                  timestampString = "526577897.566081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVPage_Player.PDPVC.playVideoTap (Any) -&gt; ()"
+                  moduleName = "TVPage Player"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devubhamanek/Documents/Bitbucket_Projects/TVPagePlayer/TVPage%20Player/TVPage%20Player/ViewController/PDPVC.swift"
+                  timestampString = "526577897.568565"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "864">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVPage Player/ViewController/videoPlaybackVC.swift"
-            timestampString = "525884953.997744"
+            timestampString = "526577130.585221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "460"
+            endingLineNumber = "460"
             landmarkName = "getChannelVideoList()"
             landmarkType = "7">
             <Locations>

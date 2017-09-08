@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import TVP
 
 class cellProductCard: MTCollectionCell {
     
@@ -25,6 +26,8 @@ class ProductCardVC: MTViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet var lbl_productPrice: UILabel!
      @IBOutlet var RattingView: TPFloatRatingView!
     @IBOutlet var Collecton_view_prdt: UICollectionView!
+    
+    var TVPView:TVPagePlayerView = TVPagePlayerView()
     
     override func viewDidLoad() {
         
@@ -119,7 +122,7 @@ class ProductCardVC: MTViewController, UICollectionViewDelegate, UICollectionVie
         let url_string = dictionorydata.value(forKey:"imageUrl") as! String
         let url =  URL(string:url_string)!
         
-        cellProductCard.image_product_card.sd_setImage(with: url, placeholderImage:appDelegateShared.getIconimage(iconname: "placeholder"))
+        cellProductCard.image_product_card.sd_setImage(with: url, placeholderImage:TVPView.getIconimage(iconname: "placeholder"))
         return cellProductCard
     }
 }
