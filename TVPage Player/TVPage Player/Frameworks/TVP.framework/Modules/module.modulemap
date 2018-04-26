@@ -7,4 +7,5 @@ framework module TVP {
 
 module TVP.Swift {
     header "TVP-Swift.h"
+    requires objc
 }
