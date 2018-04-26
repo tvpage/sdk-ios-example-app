@@ -299,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7D53961EA742BB0080A53E /* Source */,
-				EF3EBB9B1E712B3B00F4BF85 /* FrameWork */,
+				EF3EBB9B1E712B3B00F4BF85 /* Frameworks */,
 				EF3EBB9C1E712B3B00F4BF85 /* HelperClass */,
 				EF3EBB9D1E712B3B00F4BF85 /* ThirdParty */,
 				EF3EBB9E1E712B3B00F4BF85 /* ViewController */,
@@ -312,13 +312,13 @@
 			path = "TVPage Player";
 			sourceTree = "<group>";
 		};
-		EF3EBB9B1E712B3B00F4BF85 /* FrameWork */ = {
+		EF3EBB9B1E712B3B00F4BF85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				17826BF61F62EB0900D01B4A /* TVP.framework */,
 				179D0A0F1ED31CCB00D536FF /* TVPBundle.bundle */,
 			);
-			path = FrameWork;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF3EBB9C1E712B3B00F4BF85 /* HelperClass */ = {
@@ -853,36 +853,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/Frameworks",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -911,36 +882,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/Frameworks",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
