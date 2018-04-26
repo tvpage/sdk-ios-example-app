@@ -853,7 +853,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/Frameworks",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -882,7 +882,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TVPage\\ Player/FrameWork",
+					"$(PROJECT_DIR)/TVPage\\ Player/Frameworks",
 				);
 				INFOPLIST_FILE = "TVPage Player/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
